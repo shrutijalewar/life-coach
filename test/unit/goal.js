@@ -57,5 +57,31 @@ describe('Goal', function(){
       });
     });
   });
-});
+  describe('#save', function(){
+    it('should save a goal', function(done){
+      var userId = Mongo.ObjectID('000000000000000000000001'),
+          goalId = 'a00000000000000000000001';
+      Goal.findByGoalId(goalId, userId, function(err, goal){
+        goal.name = 'stuff';
+        goal.save(function(err, count){
+          expect(count).to.equal(1);
+          done();
+        });
+      });
+    });
+  });
+  describe('#addTask', function(){
+    it('should save a goal', function(done){
+      var userId = Mongo.ObjectID('000000000000000000000001'),
+          goalId = 'a00000000000000000000001';
+      Goal.findByGoalId(goalId, userId, function(err, goal){
+        goal.addTask({name: 'buy shoes', difficulty: 'Easy', description: 'go shopping', rank: '1', isComplete: false}),
+        expect(goal.tasks[0].name).to.equal('buy shoes');
+        expect(goal.tasks[0].rank).to.equal(1);
+        expect(goal.tasks[0].isComplete).to.be.false;
+        done();
+      });
+    });
+  });
+});//last
 

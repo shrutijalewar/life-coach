@@ -3,6 +3,7 @@
     "name" : "run a marathon",
     "due" : {"$date":1451455200000},
     "tags" : [ "a", "b", "c", "d" ],
+    "tasks": [],
     "userId" : {"$oid":"000000000000000000000001"}
 }
 {
@@ -10,6 +11,7 @@
     "name" : "run a marathon",
     "due" : {"$date":1451455200000},
     "tags" : [ "a", "b", "c", "d" ],
+    "tasks": [],
     "userId" : {"$oid":"000000000000000000000001"}
 }
 {
@@ -17,5 +19,6 @@
     "name" : "run a marathon",
     "due" : {"$date":1451455200000},
     "tags" : [ "a", "b", "c", "d" ],
+    "tasks": [],
     "userId" : {"$oid":"000000000000000000000002"}
 }

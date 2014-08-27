@@ -101,10 +101,10 @@ describe ('goals',function(){
       });
     });
   });
- /* describe('post /goals/3/task', function(done){
+  describe('post /goals/3/tasks', function(done){
     it('should create a specific task for a goal', function(done){
       request(app)
-      .post('/goals/a00000000000000000000001/task')
+      .post('/goals/a00000000000000000000001/tasks')
       .set('cookie', cookie)
       .send('name=buy+shoes&description=shop+for+it&difficulty=Medium&rank=3')
       .end(function(err,res){
@@ -112,5 +112,5 @@ describe ('goals',function(){
         done();
       });
     });
-  });*/
+  });
 });

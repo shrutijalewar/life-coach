@@ -28,3 +28,12 @@ exports.show = function(req, res){
     }
   });
 };
+exports.addTask = function(req, res){
+  Goal.findByGoalId(req.params.goalId, res.locals.user._id, function(err, goal){
+    if(!goal){res.redirect('/');}
+    goal.addTask(req.body);
+    goal.save(function(){
+      res.redirect('/goals/' + req.params.goalId);
+    });
+  });
+};
